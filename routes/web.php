@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,3 +15,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//提供给前端
+Route::get('/proxy-list' );
