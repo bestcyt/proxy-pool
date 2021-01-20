@@ -21,6 +21,6 @@ class ProxyController extends Controller
 
         //调用model或者别的层的方法
 
-        
+
     }
 }
