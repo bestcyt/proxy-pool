@@ -2,14 +2,18 @@
 
 namespace App\Http\Controllers\web;
 
+use App\Services\ProxyUrlService;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class ProxyController extends Controller
 {
+    public $proxyUrlService;
 
-    public function __construct()
+
+    public function __construct(ProxyUrlService $proxyUrlService)
     {
+        $this->proxyUrlService = $proxyUrlService;
     }
 
     //代理池列表ip，分页

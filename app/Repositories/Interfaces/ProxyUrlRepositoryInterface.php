@@ -10,4 +10,6 @@ interface ProxyUrlRepositoryInterface
 
     public function find($id);
 
+    public function where($where);
+
 }
