@@ -175,6 +175,10 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+
+        //代理proxy provider
+        App\Providers\RepositoryServiceProvide::class,
+
     ],
 
     /*

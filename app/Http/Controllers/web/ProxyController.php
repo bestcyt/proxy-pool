@@ -7,8 +7,10 @@ use App\Http\Controllers\Controller;
 
 class ProxyController extends Controller
 {
-    // 前端控制器
 
+    public function __construct()
+    {
+    }
 
     //代理池列表ip，分页
     public function proxyList(){
