@@ -13,7 +13,10 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        // 测试命令
+        \App\Console\Commands\TestCron::class,
+        \App\Console\Commands\SpiderUrls::class,
+
     ];
 
     /**
@@ -24,6 +27,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
+        $schedule->command('echo')->everyMinute();
+        $schedule->command('spiderUrls')->everyMinute();
         // $schedule->command('inspire')
         //          ->hourly();
     }

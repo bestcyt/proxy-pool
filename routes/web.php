@@ -17,4 +17,6 @@ Route::get('/', function () {
 });
 
 //提供给前端
+Route::get('/test','web\ProxyController@index' );
+
 Route::get('/proxy-list' );
