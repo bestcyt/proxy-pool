@@ -22,9 +22,9 @@ class CreateProxySpiderIpsTable extends Migration
             $table->string('isp', 50)->comment('运营商');
             $table->string('location', 100)->comment('地理位置');
             $table->tinyInteger('is_use')->comment('是否能用,1能用，-1不能用')->default(1);
-            $table->tinyInteger('level')->comment('代理级别(0:无参数 1透明代理 2匿名代理 3混淆代理 4高匿代理)');
-            $table->integer('last_check_time')->comment('ip最近验证时间');
-            $table->integer('last_check_res_time')->comment('ip最近验证响应时间');
+            $table->string('level')->comment('代理级别(0:无参数 1透明代理 2匿名代理 3混淆代理 4高匿代理)-调整为字符串');
+            $table->string('last_check_time')->comment('ip最近验证时间');
+            $table->string('last_check_res_time')->comment('ip最近验证响应时间');
             $table->integer('spider_time')->comment('采集批次eg：20200119,用日期ymd');
             $table->timestamps();
         });
